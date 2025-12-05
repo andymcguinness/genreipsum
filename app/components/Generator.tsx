@@ -197,18 +197,18 @@ export default function Generator({ grammar, config, iconName }: GeneratorProps)
           </div>
         </div>
 
-        <div className="bg-white dark:bg-card border border-slate-200 dark:border-slate-700 rounded-2xl p-6 sm:p-8 mb-6 shadow-sm">
+        <div className="bg-white dark:bg-card border border-slate-300 dark:border-slate-700 rounded-2xl p-6 sm:p-8 mb-6 shadow-sm">
           <div className="mb-6">
             <label className="block text-sm font-semibold mb-3 text-slate-700 dark:text-slate-100">
               Generation Mode
             </label>
-            <div className="flex gap-2 p-1 bg-slate-100 dark:bg-slate-800/50 rounded-xl">
+            <div className="flex gap-2 p-1 bg-slate-100 dark:bg-slate-700 rounded-xl">
               <button
                 onClick={() => setMode('paragraphs')}
                 className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-medium transition-all ${
                   mode === 'paragraphs'
                     ? 'bg-white dark:bg-slate-600 text-slate-900 dark:text-white shadow-sm'
-                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-600/50'
                 }`}
               >
                 Paragraphs
@@ -218,7 +218,7 @@ export default function Generator({ grammar, config, iconName }: GeneratorProps)
                 className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-medium transition-all ${
                   mode === 'words'
                     ? 'bg-white dark:bg-slate-600 text-slate-900 dark:text-white shadow-sm'
-                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-600/50'
                 }`}
               >
                 Words
@@ -228,7 +228,7 @@ export default function Generator({ grammar, config, iconName }: GeneratorProps)
                 className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-medium transition-all ${
                   mode === 'characters'
                     ? 'bg-white dark:bg-slate-600 text-slate-900 dark:text-white shadow-sm'
-                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-600/50'
                 }`}
               >
                 Characters
@@ -326,7 +326,7 @@ export default function Generator({ grammar, config, iconName }: GeneratorProps)
         </div>
 
         {generatedText && (
-          <div className="bg-white dark:bg-card border border-slate-200 dark:border-slate-700 rounded-2xl p-6 sm:p-8 shadow-sm">
+          <div className="bg-white dark:bg-card border border-slate-300 dark:border-slate-700 rounded-2xl p-6 sm:p-8 shadow-sm">
             <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6">
               <h2 className={`text-2xl font-bold bg-linear-to-r ${colors.gradient} bg-clip-text text-transparent`}>
                 Generated Text

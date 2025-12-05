@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lorem Ipsum Generators",
+  title: "Genre Ipsum",
   description: "Generate creative placeholder text for your projects",
 };
 
