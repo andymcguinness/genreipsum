@@ -1,63 +1,86 @@
-import Image from "next/image";
+'use client';
+
+import Link from 'next/link';
+import ThemeToggle from './components/ThemeToggle';
+import { generators } from './lib/generators';
+import { Zap, BarChart3, Sparkles, Moon } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 export default function Home() {
+  const genreList = Object.entries(generators);
+
+  const genreColors: Record<string, { gradient: string; icon: LucideIcon }> = {
+    cyberpunk: {
+      gradient: 'from-cyan-500 to-blue-500',
+      icon: Zap
+    },
+    corporate: {
+      gradient: 'from-blue-500 to-indigo-600',
+      icon: BarChart3
+    },
+    fantasy: {
+      gradient: 'from-purple-500 to-pink-500',
+      icon: Sparkles
+    },
+    noir: {
+      gradient: 'from-slate-500 to-zinc-600 dark:from-slate-400 dark:to-zinc-400',
+      icon: Moon
+    },
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-background gradient-mesh">
+      <main className="container mx-auto px-4 py-12 sm:py-16 max-w-6xl">
+        <div className="mb-16 sm:mb-20 flex flex-col sm:flex-row justify-between items-start gap-6">
+          <div className="flex-1">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 sm:mb-6 bg-linear-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
+              Genre Ipsum
+            </h1>
+            <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 font-medium">
+              Generate creative placeholder text for your projects
+            </p>
+          </div>
+          <ThemeToggle />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {genreList.map(([slug, generator]) => {
+            const colorData = genreColors[slug] || { gradient: 'from-gray-500 to-gray-600', icon: Sparkles };
+            const Icon = colorData.icon;
+            return (
+              <Link
+                key={slug}
+                href={`/${slug}`}
+                className="group relative bg-white dark:bg-card border border-slate-200 dark:border-slate-700 rounded-2xl p-8 hover:shadow-xl hover:shadow-indigo-500/10 dark:hover:shadow-indigo-500/20 transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`bg-linear-to-br ${colorData.gradient} p-3 rounded-xl`}>
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+                  <svg
+                    className="w-5 h-5 text-slate-400 group-hover:text-indigo-500 group-hover:translate-x-1 transition-all"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+                <h2 className={`text-2xl sm:text-3xl font-bold mb-3 bg-linear-to-r ${colorData.gradient} bg-clip-text text-transparent`}>
+                  {generator.config.name}
+                </h2>
+                <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                  {generator.config.description}
+                </p>
+              </Link>
+            );
+          })}
+        </div>
+
+        <div className="mt-16 text-center">
+          <p className="text-slate-500 dark:text-slate-400 text-sm">
+            More generators coming soon...
+          </p>
         </div>
       </main>
     </div>
