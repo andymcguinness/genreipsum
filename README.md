@@ -17,8 +17,8 @@ Genre Ipsum offers creative lorem ipsum generators for multiple genres, perfect 
 
 ### Multiple Generation Modes
 - **Paragraphs Mode**: Generate 1-10 paragraphs with 2-10 sentences each
-- **Words Mode**: Generate specific word counts (10-500 words)
-- **Characters Mode**: Generate precise character counts (50-2000 characters)
+- **Words Mode**: Generate up to specific word counts (10-500 words)
+- **Characters Mode**: Generate up to certain character counts (50-2000 characters)
 
 ### Genre-Specific Generators
 
@@ -92,7 +92,7 @@ bun install
 3. Run the development server:
 ```bash
 npm run dev
-# o0r
+# or
 yarn dev
 # or
 pnpm dev
