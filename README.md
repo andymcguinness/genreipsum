@@ -75,7 +75,7 @@ Gritty detective narratives with rain-slicked streets, dangerous dames, and hard
 1. Clone the repository:
 ```bash
 git clone https://github.com/andymcguinness/genreipsum.git
-cd loremipsum
+cd genreipsum
 ```
 
 2. Install dependencies:
@@ -92,7 +92,7 @@ bun install
 3. Run the development server:
 ```bash
 npm run dev
-# or
+# o0r
 yarn dev
 # or
 pnpm dev
@@ -135,12 +135,14 @@ genreipsum/
 │   ├── robots.ts             # Robots.txt configuration
 │   └── sitemap.ts            # Sitemap configuration
 ├── public/                   # Static assets
-│   ├── favicon.svg           # Site favicon
 │   └── social.svg            # Social media preview image
+├── LICENSE                   # MIT License
+├── next.config.ts            # Next.js configuration
 ├── package.json              # Dependencies and scripts
-├── tsconfig.json             # TypeScript configuration
-├── tailwind.config.mjs       # Tailwind configuration
-└── next.config.ts            # Next.js configuration
+├── postcss.config.mjs        # PostCSS configuration
+├── tracery-grammar.d.ts      # TypeScript definitions for Tracery
+└── tsconfig.json             # TypeScript configuration
+
 ```
 
 ## Adding New Generators
