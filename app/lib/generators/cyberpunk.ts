@@ -40,8 +40,8 @@ export const cyberpunkGrammar = {
   ],
   valuable: ['credsticks', 'paydata', 'corp secrets', 'zero-day exploits', 'prototype wetware', 'black market chrome'],
   location: [
-    'the sprawl', 'the undercity', 'the megacity', 'the Beltway', 'the Zone',
-    'the arcology', 'the Coffin Hotels', 'the Stacks', 'Old Town', 'sector seven'
+    'sprawl', 'undercity', 'megacity', 'Beltway', 'Zone',
+    'arcology', 'Coffin Hotels', 'Stacks', 'Old Town', 'sector seven'
   ],
   district: ['red light district', 'corporate zone', 'combat zone', 'slums', 'undercity', 'tech district'],
   matrix_space: ['the matrix', 'cyberspace', 'the grid', 'the net', 'virtual space', 'the datasphere'],
@@ -68,7 +68,7 @@ export const cyberpunkGrammar = {
     'surveillance drones', 'flying cars', 'digital ghosts'
   ],
   atmosphere: ['acid rain', 'neon haze', 'smog-choked air', 'electric fog', 'toxic drizzle'],
-  weather: ['the toxic rain', 'acidic drizzle', 'neon-lit fog', 'electromagnetic storms', 'smog'],
+  weather: ['toxic rain', 'acidic drizzle', 'neon-lit fog', 'electromagnetic storms', 'smog'],
   urban_decay: ['crumbling concrete', 'rusted infrastructure', 'abandoned megablocks', 'flickering streetlights'],
   corporation: [
     'OmniCorp', 'NexTech', 'SovOil', 'Petrochem', 'SynthCorp', 'DataMax',
@@ -120,4 +120,22 @@ export const cyberpunkConfig = {
   accentColor: 'cyan',
   borderColor: 'border-cyan-500/30',
   secondaryBorderColor: 'border-purple-500/30',
+  seo: {
+    title: 'Cyberpunk Lorem Ipsum Generator - Neon-Soaked Placeholder Text',
+    description: 'Generate cyberpunk placeholder text with netrunners, chrome, and neon aesthetics for sci-fi and dystopian design projects.',
+    keywords: [
+      'cyberpunk lorem ipsum',
+      'cyberpunk placeholder text',
+      'sci-fi text generator',
+      'futuristic placeholder',
+      'netrunner text',
+      'dystopian lorem ipsum',
+      'neon text generator',
+      'tech noir placeholder',
+      'cyberpunk mockup text',
+      'chrome placeholder'
+    ],
+    ogTitle: 'Cyberpunk Lorem Ipsum - Jack Into Neon-Soaked Placeholder Text',
+    ogDescription: 'Generate cyberpunk placeholder text with netrunners, chrome, and neon aesthetics for sci-fi and dystopian design projects.'
+  }
 };

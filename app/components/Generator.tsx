@@ -13,34 +13,39 @@ interface GeneratorProps {
   iconName?: string;
 }
 
-// Map accent colors to modern SaaS gradients
+// Map accent colors to solid colors
 const getColorClasses = (accentColor: string) => {
   const colorMap: Record<string, {
-    gradient: string;
+    iconBg: string;
+    titleColor: string;
     button: string;
     buttonHover: string;
     ring: string;
   }> = {
     cyan: {
-      gradient: 'from-cyan-500 to-blue-500',
+      iconBg: 'bg-cyan-500',
+      titleColor: 'text-cyan-600 dark:text-cyan-400',
       button: 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600',
       buttonHover: 'hover:shadow-cyan-500/50',
       ring: 'ring-cyan-500',
     },
     blue: {
-      gradient: 'from-blue-500 to-indigo-600',
+      iconBg: 'bg-blue-500',
+      titleColor: 'text-blue-600 dark:text-blue-400',
       button: 'bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700',
       buttonHover: 'hover:shadow-blue-500/50',
       ring: 'ring-blue-500',
     },
     purple: {
-      gradient: 'from-purple-500 to-pink-500',
+      iconBg: 'bg-purple-500',
+      titleColor: 'text-purple-600 dark:text-purple-400',
       button: 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600',
       buttonHover: 'hover:shadow-purple-500/50',
       ring: 'ring-purple-500',
     },
     gray: {
-      gradient: 'from-slate-500 to-zinc-600 dark:from-slate-400 dark:to-zinc-400',
+      iconBg: 'bg-slate-500',
+      titleColor: 'text-slate-600 dark:text-slate-400',
       button: 'bg-gradient-to-r from-slate-500 to-zinc-600 hover:from-slate-600 hover:to-zinc-700',
       buttonHover: 'hover:shadow-slate-500/50',
       ring: 'ring-slate-500',
@@ -180,14 +185,14 @@ export default function Generator({ grammar, config, iconName }: GeneratorProps)
           <div>
             <div className="flex items-center gap-4 mb-4">
               {iconName && iconMap[iconName] && (
-                <div className={`bg-linear-to-br ${colors.gradient} p-3 rounded-xl`}>
+                <div className={`${colors.iconBg} p-3 rounded-xl`}>
                   {(() => {
                     const Icon = iconMap[iconName];
                     return <Icon className="w-8 h-8 text-white" />;
                   })()}
                 </div>
               )}
-              <h1 className={`text-4xl sm:text-5xl md:text-6xl font-bold bg-linear-to-r ${colors.gradient} bg-clip-text text-transparent`}>
+              <h1 className={`text-4xl sm:text-5xl md:text-6xl font-bold ${colors.titleColor}`}>
                 {config.name}
               </h1>
             </div>
@@ -328,7 +333,7 @@ export default function Generator({ grammar, config, iconName }: GeneratorProps)
         {generatedText && (
           <div className="bg-white dark:bg-card border border-slate-300 dark:border-slate-700 rounded-2xl p-6 sm:p-8 shadow-sm">
             <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6">
-              <h2 className={`text-2xl font-bold bg-linear-to-r ${colors.gradient} bg-clip-text text-transparent`}>
+              <h2 className={`text-2xl font-bold ${colors.titleColor}`}>
                 Generated Text
               </h2>
               <div className="flex flex-wrap gap-2">

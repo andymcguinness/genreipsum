@@ -260,4 +260,22 @@ export const corporateConfig = {
   accentColor: 'blue',
   borderColor: 'border-blue-500/30',
   secondaryBorderColor: 'border-indigo-500/30',
+  seo: {
+    title: 'Corporate Speak Lorem Ipsum Generator - Business Jargon Placeholder Text',
+    description: 'Generate corporate jargon and business buzzwords. Enterprise-grade placeholder text for presentations and business designs.',
+    keywords: [
+      'corporate lorem ipsum',
+      'business jargon generator',
+      'corporate speak placeholder',
+      'buzzword generator',
+      'enterprise placeholder text',
+      'business mockup text',
+      'corporate jargon lorem ipsum',
+      'synergy placeholder',
+      'business presentation text',
+      'corporate buzzwords'
+    ],
+    ogTitle: 'Corporate Speak Lorem Ipsum - Synergize Your Placeholder Text',
+    ogDescription: 'Generate corporate jargon and business buzzwords. Enterprise-grade placeholder text for presentations and business designs.'
+  }
 };

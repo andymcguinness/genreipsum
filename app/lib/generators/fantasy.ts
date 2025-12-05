@@ -1,7 +1,7 @@
 export const fantasyGrammar = {
   origin: ['#sentence.capitalize#'],
   sentence: [
-    'the #hero# ventured into the #location# seeking #quest_object#',
+    '#hero# ventured into the #location# seeking #quest_object#',
     '#creature_plural# roamed the #terrain# under the #sky_condition#',
     'a #magic_user# cast #spell_type# upon the #target#',
     'the #artifact# glowed with #magic_descriptor# energy in the #time_of_day#',
@@ -16,15 +16,15 @@ export const fantasyGrammar = {
     'the #celebration# commenced as the #celestial_event# appeared overhead',
     '#weather_magic# swept across the #terrain#, summoned by #magic_user#',
     'merchants traded #trade_good# in the bustling #settlement#',
-    'the #religious_figure# blessed the #hero# before the journey to #dangerous_location#',
+    '#religious_figure# blessed #hero# before the journey to #dangerous_location#',
     'shadows of #creature_plural# moved through the #atmospheric_location#',
     'a #natural_phenomenon# revealed the entrance to #hidden_place#',
-    'the #faction# sought to control #power_source# for their own ends',
+    '#faction# sought to control #power_source# for their own ends',
     '#hero# wielded #weapon# forged from #magical_material# and #rare_element#',
     'the #magic_school# required years of study to master #advanced_magic#',
     'during the #festival#, villagers honored the #deity# with offerings of #offering#',
     'the curse could only be broken by #solution# before the #deadline#',
-    '#shapeshifter# took the form of #animal# to escape the #pursuer#',
+    '#shapeshifter# took the form of #animal# to escape #pursuer#',
     'whispers of #rumor# spread throughout the #settlement# like wildfire',
   ],
   hero: [
@@ -285,4 +285,22 @@ export const fantasyConfig = {
   accentColor: 'purple',
   borderColor: 'border-purple-500/30',
   secondaryBorderColor: 'border-pink-500/30',
+  seo: {
+    title: 'Fantasy Lorem Ipsum Generator - Epic Quest Placeholder Text',
+    description: 'Generate magical fantasy placeholder text with heroes, dragons, and epic quests for RPG and medieval design projects.',
+    keywords: [
+      'fantasy lorem ipsum',
+      'fantasy placeholder text',
+      'medieval text generator',
+      'rpg placeholder text',
+      'epic fantasy generator',
+      'dragon lorem ipsum',
+      'magical placeholder',
+      'fantasy game text',
+      'quest placeholder',
+      'medieval mockup text'
+    ],
+    ogTitle: 'Fantasy Lorem Ipsum - Embark on an Epic Quest with Magical Text',
+    ogDescription: 'Generate magical fantasy placeholder text with heroes, dragons, and epic quests for RPG and medieval design projects.'
+  }
 };

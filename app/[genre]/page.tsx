@@ -31,9 +31,50 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const seo = generator.config.seo;
+  const defaultTitle = `${generator.config.name} Lorem Ipsum Generator`;
+  const defaultDescription = generator.config.description;
+
   return {
-    title: `${generator.config.name} Lorem Ipsum`,
-    description: generator.config.description,
+    title: seo?.title || defaultTitle,
+    description: seo?.description || defaultDescription,
+    keywords: seo?.keywords || [],
+    alternates: {
+      canonical: `/${genre}`,
+    },
+    openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      url: `/${genre}`,
+      siteName: 'Genre Ipsum',
+      title: seo?.ogTitle || seo?.title || defaultTitle,
+      description: seo?.ogDescription || seo?.description || defaultDescription,
+      images: [
+        {
+          url: '/social.svg',
+          width: 1200,
+          height: 630,
+          alt: `${generator.config.name} Lorem Ipsum Generator`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: seo?.ogTitle || seo?.title || defaultTitle,
+      description: seo?.ogDescription || seo?.description || defaultDescription,
+      images: ['/social.svg'],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
   };
 }
 

@@ -11,6 +11,13 @@ export interface GeneratorConfig {
   accentColor: string;
   borderColor: string;
   secondaryBorderColor: string;
+  seo?: {
+    title?: string;
+    description?: string;
+    keywords?: string[];
+    ogTitle?: string;
+    ogDescription?: string;
+  };
 }
 
 export interface Generator {

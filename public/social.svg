@@ -1,0 +1,68 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#ffffff"/>
+
+  <!-- Decorative gradient circles -->
+  <circle cx="100" cy="100" r="200" fill="url(#bgGradient)" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="250" fill="url(#bgGradient)" opacity="0.1"/>
+
+  <!-- Icon container with gradient background -->
+  <rect x="80" y="215" width="120" height="120" rx="24" fill="url(#iconGradient)"/>
+
+  <!-- Pencil icon (white) -->
+  <g transform="translate(100, 235)">
+    <path d="M12 20h9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="scale(3.33)"/>
+    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="scale(3.33)"/>
+  </g>
+
+  <!-- Main title -->
+  <text x="240" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="80" font-weight="800" fill="url(#iconGradient)">
+    Genre Ipsum
+  </text>
+
+  <!-- Subtitle -->
+  <text x="240" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="500" fill="#64748b">
+    Creative Lorem Ipsum Generators
+  </text>
+
+  <!-- Genre badges -->
+  <g transform="translate(240, 420)">
+    <!-- Cyberpunk badge -->
+    <rect x="0" y="0" width="180" height="50" rx="25" fill="#06b6d4" opacity="0.15"/>
+    <text x="90" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#0891b2" text-anchor="middle">
+      Cyberpunk
+    </text>
+
+    <!-- Fantasy badge -->
+    <rect x="200" y="0" width="150" height="50" rx="25" fill="#a855f7" opacity="0.15"/>
+    <text x="275" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#9333ea" text-anchor="middle">
+      Fantasy
+    </text>
+
+    <!-- Noir badge -->
+    <rect x="370" y="0" width="120" height="50" rx="25" fill="#64748b" opacity="0.15"/>
+    <text x="430" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#475569" text-anchor="middle">
+      Noir
+    </text>
+
+    <!-- Corporate badge -->
+    <rect x="510" y="0" width="160" height="50" rx="25" fill="#3b82f6" opacity="0.15"/>
+    <text x="590" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#2563eb" text-anchor="middle">
+      Corporate
+    </text>
+  </g>
+</svg>
