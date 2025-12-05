@@ -35,26 +35,28 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background gradient-mesh">
       <main className="container mx-auto px-4 py-12 sm:py-16 max-w-6xl">
-        <div className="mb-16 sm:mb-20 flex flex-col sm:flex-row justify-between items-start gap-6">
-          <div className="flex-1">
-            <div className="flex items-start gap-6">
-              <div className="bg-linear-to-br from-indigo-500 via-purple-500 to-pink-500 p-4 sm:p-5 rounded-2xl flex items-center justify-center">
-                <svg className="w-12 h-12 sm:w-16 sm:h-16 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <div className="mb-12 sm:mb-16 md:mb-20 relative">
+          <div className="absolute top-0 right-0">
+            <ThemeToggle />
+          </div>
+          <div className="pr-14 sm:pr-0">
+            <div className="flex items-start gap-3 sm:gap-6">
+              <div className="bg-linear-to-br from-indigo-500 via-purple-500 to-pink-500 p-3 sm:p-4 md:p-5 rounded-xl sm:rounded-2xl flex items-center justify-center shrink-0">
+                <svg className="w-8 h-8 sm:w-12 sm:h-12 md:w-18 md:h-18 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 20h9" />
                   <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
                 </svg>
               </div>
-              <div className="flex-1">
-                <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold bg-linear-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent pb-2 mb-2">
+              <div className="flex-1 min-w-0">
+                <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-linear-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent pb-1 sm:pb-2 mb-1 sm:mb-2 leading-tight">
                   Genre Ipsum
                 </h1>
-                <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 font-medium">
+                <p className="text-base sm:text-2xl md:text-3xl text-slate-600 dark:text-slate-300 font-medium">
                   Creative Lorem Ipsum Generators
                 </p>
               </div>
             </div>
           </div>
-          <ThemeToggle />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

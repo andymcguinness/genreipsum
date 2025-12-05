@@ -168,9 +168,12 @@ export default function Generator({ grammar, config, iconName }: GeneratorProps)
 
   return (
     <div className="min-h-screen bg-background gradient-mesh">
-      <main className="container mx-auto px-4 py-8 sm:py-12 max-w-4xl">
+      <main className="container mx-auto px-4 py-12 sm:py-16 max-w-4xl">
         <div className="mb-8 sm:mb-12">
-          <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-6">
+          <div className="relative mb-6">
+            <div className="absolute top-0 right-0">
+              <ThemeToggle />
+            </div>
             <Link
               href="/"
               className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
@@ -180,7 +183,6 @@ export default function Generator({ grammar, config, iconName }: GeneratorProps)
               </svg>
               <span>Back to generators</span>
             </Link>
-            <ThemeToggle />
           </div>
           <div>
             <div className="flex items-center gap-4 mb-4">
