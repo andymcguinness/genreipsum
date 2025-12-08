@@ -98,7 +98,13 @@ export default function Home() {
           })}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center space-y-4">
+          <Link
+            href="/about"
+            className="inline-block px-8 py-4 bg-linear-to-r from-indigo-600 via-purple-600 to-pink-600 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl hover:shadow-indigo-500/20 transition-all duration-200 hover:scale-105"
+          >
+            About Genre Ipsum
+          </Link>
           <p className="text-slate-500 dark:text-slate-400 text-sm">
             More generators coming soon...
           </p>
